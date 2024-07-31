@@ -1,0 +1,4 @@
+diffusers==0.16.1
+transformers
+accelerate
+torch
