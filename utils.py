@@ -65,7 +65,16 @@ def register_free_upblock2d(model, b1=1.2, b2=1.4, s1=0.9, s2=0.2):
 def register_free_crossattn_upblock2d(model, b1=1.2, b2=1.4, s1=0.9, s2=0.2):
     # クロスアテンションアップサンプリングブロックの順方向計算を定義する内部関数
     def up_forward(self):
-        def forward(hidden_states, res_hidden_states_tuple, temb=None, encoder_hidden_states=None, cross_attention_kwargs=None, upsample_size=None):
+        def forward(
+            hidden_states: torch.FloatTensor,
+            res_hidden_states_tuple,
+            temb = None,
+            encoder_hidden_states = None,
+            cross_attention_kwargs = None,
+            upsample_size = None,
+            attention_mask = None,
+            encoder_attention_mask = None,
+        ):
             for resnet, attn in zip(self.resnets, self.attentions):
                 res_hidden_states = res_hidden_states_tuple[-1]
                 res_hidden_states_tuple = res_hidden_states_tuple[:-1]

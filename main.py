@@ -2,6 +2,8 @@ from PIL import Image
 import torch
 from diffusers import StableDiffusionPipeline
 from utils import register_free_upblock2d, register_free_crossattn_upblock2d
+import warnings
+warnings.filterwarnings("ignore")
 
 model_id = "stabilityai/stable-diffusion-2-1"
 pip = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
