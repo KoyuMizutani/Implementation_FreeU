@@ -32,5 +32,5 @@ b1, b2, s1, s2 = 1.1, 1.2, 0.2, 0.2
 sd_image, freeu_image = generate_images(prompt, seed, b1, b2, s1, s2)
 
 # 画像を保存
-sd_image.save("sd_image.png")
-freeu_image.save("freeu_image.png")
+sd_image.save("fig/sd_image.png")
+freeu_image.save("fig/freeu_image.png")
