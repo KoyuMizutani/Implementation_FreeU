@@ -13,6 +13,7 @@ CVPRに採択された理由として、UNetが用いられるさまざまなモ
 
 1. requirements.txtを参考に環境構築
 2. `python main.py`で実行
+StableDiffusionのFreeUありとなしで画像を生成し、保存
 
 ### main.py
 プロンプトを入力すると、FreeUを使用する場合と使用しない場合の2つの画像を生成する。
